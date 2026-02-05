@@ -385,6 +385,10 @@ li {
   .hero .fa-react {
     font-size: 200px;
   }
+  /** Navbaar */
+  .navbar .nav-list {
+    gap: 20px;
+  }
 }
 @media (max-width: 768px) {
 }
