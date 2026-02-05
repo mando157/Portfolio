@@ -388,6 +388,7 @@ li {
   /** Navbaar */
   .navbar .nav-list {
     gap: 20px;
+    padding: 15px 20px;
   }
 }
 @media (max-width: 768px) {
