@@ -400,6 +400,7 @@ li {
 }
 
 /** Features Section */
+
 section.features.py-3 {
   position: relative;
   height: 100vh;
@@ -421,12 +422,6 @@ section.features.py-3 {
   font-family: var(--secondary-font-family);
   text-transform: uppercase;
 }
-.features .card-text {
-  font-family: var(--primary-font-family);
-}
-.features p {
-  color: var(--text-secondary);
-}
 .features .feature-card {
   display: flex;
   flex-direction: column;
@@ -434,22 +429,63 @@ section.features.py-3 {
   background: var(--bg-card);
   box-shadow: inset 0 -10px 30px var(--accent-dark-primary);
   border-radius: 10px;
-  transition: 0.5s ease;
+  transition: opacity 1.8s ease, box-shadow 0.5s ease, transform 1.8s ease;
   padding: 30px;
+  opacity: 0;
+}
+.from-left {
+  transform: translateX(100px);
+}
+
+.from-right {
+  transform: translateX(-100px);
+}
+
+.from-top {
+  transform: translateY(-100px);
+}
+
+.from-bottom {
+  transform: translateY(100px);
+}
+.feature-card.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.features .card-text {
+  font-family: var(--primary-font-family);
+}
+.features p {
+  color: var(--text-secondary);
 }
 .features .feature-card:hover {
   box-shadow: inset 0 10px 30px var(--accent-primary);
 }
-.features svg {
+.features .feature-card .icon,
+.features .feature-card svg {
   font-size: 50px;
   color: var(--accent-dark-primary);
-  animation: rotation-icon 0.3s linear infinite;
+  transition: transform 0.3s ease;
+}
+.features .feature-card:hover .icon,
+.features .feature-card:hover svg {
+  animation: rotation-icon 0.3s linear;
 }
 @keyframes rotation-icon {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 /** Responsive */
 @media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
   /** Hero Section */
   .hero-content {
     max-width: 400px;
@@ -485,11 +521,37 @@ section.features.py-3 {
   .features .text {
     font-size: 12px;
   }
+  .from-top {
+    transform: translateX(100px);
+  }
+
+  .from-bottom {
+    transform: translateX(-100px);
+  }
 }
 @media (max-width: 768px) {
 }
 @media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
   .hero h1 {
     font-size: clamp(2.4rem, 8vw, 3.5rem);
+  }
+  /** Features Section */
+  .from-left {
+    transform: translateX(-100px);
+  }
+
+  .from-right {
+    transform: translateX(-100px);
+  }
+
+  .from-top {
+    transform: translateX(100px);
+  }
+
+  .from-bottom {
+    transform: translateX(100px);
   }
 }
