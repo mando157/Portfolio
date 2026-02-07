@@ -29,6 +29,7 @@ function typeing(){
 }
 typeing();
 
+//* Features Card Animation 
 
 const cards = document.querySelectorAll(".feature-card");
 
@@ -47,4 +48,30 @@ const observer = new IntersectionObserver(entries => {
   });
 
   cards.forEach(card => observer.observe(card));
+
+//* Moving bar
+const words = document.querySelector(".moving");
+const container = document.querySelector(".motion-text");
+
+  let canMove = true;
+  let x = -words.offsetWidth;
+
+  container.addEventListener("mouseenter", () => {
+    canMove = false;
+  });
+  container.addEventListener("mouseleave", () => {
+    canMove = true;
+  });
+
+function move (){
+    if(canMove){
+        x += 2;
+        if(x > container.offsetWidth){
+            x = -words.offsetWidth;
+        }
+        words.style.transform = `translateX(${x}px)`
+    }
+    requestAnimationFrame(move);
+}
+move();
 

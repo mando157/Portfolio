@@ -14,6 +14,7 @@
   --text-primary: #ffffff;
   --text-secondary: #b3b8c2;
   --text-muted: #7c828e;
+  --success: #6fcf97;
 
   /* Accent */
   --accent-primary: #61dafb;
@@ -395,9 +396,33 @@ li {
 /** Moving Text */
 .motion-text {
   position: relative;
+  display: flex;
+  align-items: center;
   height: 40px;
   background: var(--bg-main);
   box-shadow: inset 0 -10px 30px var(--accent-dark-primary);
+  overflow: hidden;
+}
+.motion-text .text {
+  display: flex;
+}
+.motion-text .moving {
+  display: flex;
+  gap: 20px;
+}
+.motion-text .moving .skill-box {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: 40px;
+  gap: 2px;
+}
+.motion-text .moving .skill {
+  margin: 0;
+  font-size: 12px;
+}
+.fa-circle-check {
+  color: var(--success);
 }
 
 /** Features Section */
@@ -437,15 +462,12 @@ section.features.py-3 {
 .from-left {
   transform: translateX(100px);
 }
-
 .from-right {
   transform: translateX(-100px);
 }
-
 .from-top {
   transform: translateY(-100px);
 }
-
 .from-bottom {
   transform: translateY(100px);
 }
@@ -483,7 +505,10 @@ section.features.py-3 {
 }
 
 /** Responsive */
-@media (max-width: 900px) {
+@media (max-width: 900px) and (min-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
   .hero h1 {
     font-size: clamp(2.4rem, 8vw, 3.5rem);
   }
