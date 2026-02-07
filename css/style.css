@@ -692,6 +692,10 @@ section.features.py-3 {
   .from-bottom {
     transform: translateX(-80px);
   }
+  /** About Me Section */
+  .about-content {
+    padding: 0 10px;
+  }
 }
 @media (max-width: 768px) {
 }
