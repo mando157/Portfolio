@@ -450,7 +450,7 @@ li {
 
 section.features.py-3 {
   position: relative;
-  height: 100vh;
+  height: max-content;
 }
 .section-text::after {
   content: "";
@@ -464,7 +464,7 @@ section.features.py-3 {
   background: var(--accent-dark-primary);
   border-radius: 50%;
 }
-.features .section-title {
+.section-title {
   font-size: 60px;
   font-family: var(--secondary-font-family);
   text-transform: uppercase;
@@ -503,7 +503,9 @@ section.features.py-3 {
 .features .card-text {
   font-family: var(--primary-font-family);
 }
-.features p {
+
+.features p,
+.text {
   color: var(--text-secondary);
 }
 .features .feature-card:hover {
@@ -518,6 +520,91 @@ section.features.py-3 {
 .features .feature-card:hover .icon,
 .features .feature-card:hover svg {
   animation: rotation-icon 0.3s linear;
+}
+
+/** About Me Section */
+.about .about-image {
+  width: 100%;
+  max-width: 300px;
+  margin-right: auto;
+}
+.about .about-image img {
+  box-shadow: 5px 10px 30px var(--accent-dark-primary);
+}
+.about .about-text .title {
+  font-size: 40px;
+  font-family: var(--secondary-font-family);
+}
+.about .about-text p {
+  color: var(--text-secondary);
+  font-family: var(--primary-font-family);
+  font-weight: bold;
+}
+.about .about-btn {
+  padding: 10px 20px;
+  margin-right: 15px;
+  background: var(--accent-primary);
+  color: var(--black);
+  font-weight: bold;
+  border-radius: 10px;
+}
+.about .about-btn:hover {
+  color: var(--white);
+  box-shadow: 0px 0px 20px var(--accent-primary);
+}
+
+/** Social icon buttons: make circular and centered */
+
+.about .about-btn.facebook,
+.about .about-btn.whatsapp,
+.about .about-btn.instagram,
+.about .about-btn.linkedin,
+.about .about-btn.github {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-primary);
+  color: var(--black);
+}
+.about .about-btn.facebook i,
+.about .about-btn.instagram i,
+.about .about-btn.linkedin i,
+.about .about-btn.github i {
+  font-size: 16px;
+}
+.about .about-btn.whatsapp i {
+  font-size: 16px;
+}
+.about .facebook:hover {
+  background: #1877f2 !important;
+  color: var(--white) !important;
+}
+.about .linkedin:hover {
+  background: #0a66c2 !important;
+  color: var(--white) !important;
+}
+.about .github:hover {
+  background: #333 !important;
+  color: var(--white) !important;
+}
+.about .instagram:hover {
+  background: linear-gradient(
+    45deg,
+    #f58529 0%,
+    #dd2a7b 30%,
+    #8134af 60%,
+    #515bd4 100%
+  ) !important;
+  color: var(--white) !important;
+}
+.about .whatsapp:hover {
+  background: #25d366 !important;
+  color: var(--color) !important;
 }
 @keyframes rotation-icon {
   from {
@@ -552,6 +639,7 @@ section.features.py-3 {
   .from-bottom {
     transform: translateX(100px);
   }
+  /** About Me Section */
 }
 
 @media (max-width: 600px) {
@@ -584,10 +672,10 @@ section.features.py-3 {
     padding: 15px 10px;
   }
   /** Features Section */
-  .features .section-title {
+  .section-title {
     font-size: 40px;
   }
-  .features .text {
+  .text {
     font-size: 12px;
   }
   .from-left {
