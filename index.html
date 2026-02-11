@@ -1,40 +1,55 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS StyleSheet -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/all.min.css" />
-    <link rel="stylesheet" href="./css/bootstrap.css.map" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <!-- Font Awesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
 
-    <title>Mox | Mando</title>
-  </head>
-  <body>
-    <main>
-      <a href="#home" class="top-button">
-        <svg viewBox="0 0 384 512" class="svgIcon">
-          <path
-            d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-          ></path>
-        </svg>
-      </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS StyleSheet -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.css.map" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
 
-      <!--* Hero Section -->
+  <title>Mox | Mando</title>
+</head>
 
-      <section id="home" class="hero">
-        <nav class="navbar">
+<body>
+  <main>
+    <a href="#home" class="top-button">
+      <svg viewBox="0 0 384 512" class="svgIcon">
+        <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+        </path>
+      </svg>
+    </a>
+
+    <!--* Hero Section -->
+
+    <section id="home" class="hero">
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
+
+              <li class="navlink"><a href="" class="link">Services</a></li>
+              <li class="navlink"><a href="" class="link">Portfolio</a></li>
+              <li class="navlink"><a href="" class="link">Contact Us</a></li>
+              <li class="navlink"><a href="" class="link">Awards</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- <nav class="navbar">
           <ul class="nav-list first-list">
             <li class="navlink"><a href="" class="link">Services</a></li>
             <li class="navlink"><a href="" class="link">Portfolio</a></li>
@@ -43,254 +58,229 @@
             <li class="navlink"><a href="" class="link">Contact Us</a></li>
             <li class="navlink"><a href="" class="link">Awards</a></li>
           </ul>
-        </nav>
-        <div class="hero-content">
-          <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-react"></i>
-          <i class="fa-brands fa-css3"></i>
-          <i class="fa-brands fa-square-js"></i>
-          <h1>
-            <span>I'm a</span>
-            <span id="typing-text"></span>
-            <span
-              >Developer
-              <p>
-                Junior Front End Developer creating clean, responsive websites
-                with attention to performance and design details
-              </p></span
-            >
-          </h1>
+        </nav> -->
+      <div class="hero-content">
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-react"></i>
+        <i class="fa-brands fa-css3"></i>
+        <i class="fa-brands fa-square-js"></i>
+        <h1>
+          <span>I'm a</span>
+          <span id="typing-text"></span>
+          <span>Developer
+            <p>
+              Junior Front End Developer creating clean, responsive websites
+              with attention to performance and design details
+            </p>
+          </span>
+        </h1>
 
-          <div class="about">
-            <a href="#about" class="link">About Me</a>
-            <div
-              class="scrolldown"
-              onclick="
+        <div class="about">
+          <a href="#about" class="link">About Me</a>
+          <div class="scrolldown" onclick="
                 document
                   .getElementById('about')
                   .scrollIntoView({ behavior: 'smooth' })
-              "
-              style="--color: skyblue"
-            >
-              <div class="chevrons">
-                <div class="chevrondown"></div>
-                <div class="chevrondown"></div>
-              </div>
+              " style="--color: skyblue">
+            <div class="chevrons">
+              <div class="chevrondown"></div>
+              <div class="chevrondown"></div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--* Motion Text Section -->
+    <!--* Motion Text Section -->
 
-      <section class="motion-text">
-        <div class="text">
-          <span class="moving">
-            <div class="skill-box">
-              <i class="fa-solid fa-circle-check"></i>
-              <h4 class="skill">HTML5 & CSS3</h4>
-            </div>
+    <section class="motion-text">
+      <div class="text">
+        <span class="moving">
+          <div class="skill-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4 class="skill">HTML5 & CSS3</h4>
+          </div>
 
-            <div class="skill-box">
-              <i class="fa-solid fa-circle-check"></i>
-              <h4 class="skill">Bootstrap x5</h4>
-            </div>
+          <div class="skill-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4 class="skill">Bootstrap x5</h4>
+          </div>
 
-            <div class="skill-box">
-              <i class="fa-solid fa-circle-check"></i>
-              <h4 class="skill">Modern UI</h4>
-            </div>
+          <div class="skill-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4 class="skill">Modern UI</h4>
+          </div>
 
-            <div class="skill-box">
-              <i class="fa-solid fa-circle-check"></i>
-              <h4 class="skill">Responsive Design & Mobile Friendly</h4>
-            </div>
+          <div class="skill-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4 class="skill">Responsive Design & Mobile Friendly</h4>
+          </div>
 
-            <div class="skill-box">
-              <i class="fa-solid fa-circle-check"></i>
-              <h4 class="skill">JavaScript</h4>
-            </div>
+          <div class="skill-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4 class="skill">JavaScript</h4>
+          </div>
 
-            <div class="skill-box">
-              <i class="fa-solid fa-circle-check"></i>
-              <h4 class="skill">Font Awesome</h4>
-            </div>
+          <div class="skill-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4 class="skill">Font Awesome</h4>
+          </div>
 
-            <div class="skill-box">
-              <i class="fa-solid fa-circle-check"></i>
-              <h4 class="skill">Accessibility</h4>
-            </div>
+          <div class="skill-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4 class="skill">Accessibility</h4>
+          </div>
 
-            <div class="skill-box">
-              <i class="fa-solid fa-circle-check"></i>
-              <h4 class="skill">Cross-Browser Compatibility</h4>
-            </div>
+          <div class="skill-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4 class="skill">Cross-Browser Compatibility</h4>
+          </div>
 
-            <div class="skill-box">
-              <i class="fa-solid fa-circle-check"></i>
-              <h4 class="skill">Clean Code & Maintainability</h4>
-            </div>
-          </span>
+          <div class="skill-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4 class="skill">Clean Code & Maintainability</h4>
+          </div>
+        </span>
+      </div>
+    </section>
+
+    <!--* Features Section -->
+
+    <section class="features py-5">
+      <div class="container">
+        <div class="section-text text-center mb-5">
+          <h2 class="section-title fw-bold">features</h2>
+          <p class="text">What makes my work stand out</p>
         </div>
-      </section>
+        <div class="row grid g-4 text-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card h-100 from-right">
+              <i class="icon fa-solid fa-display mb-3"></i>
+              <h5 class="card-text">Responsive Design</h5>
+              <p>Websites that work on all screen sizes.</p>
+            </div>
+          </div>
 
-      <!--* Features Section -->
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card h-100 from-top">
+              <i class="icon fa-solid fa-code mb-3"></i>
+              <h5 class="card-text">Clean Code</h5>
+              <p>Organized and readable code structure.</p>
+            </div>
+          </div>
 
-      <section class="features py-5">
-        <div class="container">
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card h-100 from-left">
+              <i class="icon fa-solid fa-bolt-lightning mb-3"></i>
+              <h5 class="card-text">Fast Performance</h5>
+              <p>Optimized for speed and performance.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 offset-lg-4">
+            <div class="feature-card h-100 from-bottom">
+              <i class="icon fa-regular fa-face-grin-beam mb-3"></i>
+              <h5 class="card-text">User Friendly</h5>
+              <p>Easy and intuitive user experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--* About Section -->
+
+    <section class="about py-4" id="about">
+      <div class="container">
+        <div class="section-text text-center mb-5">
+          <h2 class="section-title fw-bold">about me</h2>
+          <p class="text">A brief introduction to who I am and what I do</p>
+        </div>
+        <div class="about-content row align-items-center">
+          <div class="about-image col-md-3 mx-auto col-lg-4 col-sm-12 mb-4">
+            <img src="./images/profile.jpg" alt="Profile Picture" class="img-fluid rounded" />
+          </div>
+          <div class="about-text col-lg-6 col-md-6 col-sm-12 offset-md-2 text-center text-md-start">
+            <h3 class="title mb-3">Hi, I'm Mohamed!</h3>
+            <p>
+              I'm a passionate junior front-end developer with a knack for
+              creating clean, responsive websites. With a strong foundation in
+              HTML, CSS, and JavaScript, I specialize in crafting visually
+              appealing and user-friendly web experiences. I pay close
+              attention to performance and design details, ensuring that every
+              project I work on is not only functional but also aesthetically
+              pleasing. I'm eager to contribute my skills and creativity to
+              build engaging websites that leave a lasting impression.
+            </p>
+            <a href="" class="about-btn btn mt-3">Download CV</a>
+            <a href="https://www.facebook.com/share/16ztwzktt5/" class="facebook about-btn btn mt-3"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/qr/WCCUHHK4OT5JA1" class="whatsapp about-btn btn mt-3"><i
+                class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/mohamed_hassan_.0_0?igsh=MWFiaGpwYWxubTlzbw=="
+              class="instagram about-btn btn mt-3"><i class="fa-brands fa-instagram"></i></a>
+
+            <a href="https://www.linkedin.com/in/mohamed-hassan-412896348?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              class="linkedin about-btn btn mt-3"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/mando157" class="github about-btn btn mt-3"><i
+                class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--* Skills Section -->
+    <section class="skills p-5" id="skills">
+      <div class="container">
+        <div class="section-content">
           <div class="section-text text-center mb-5">
-            <h2 class="section-title fw-bold">features</h2>
-            <p class="text">What makes my work stand out</p>
+            <h2 class="section-title fw-bold">My Skills</h2>
+            <p class="text">Technologies and tools I'm proficient in</p>
           </div>
-          <div class="row grid g-4 text-center">
-            <div class="col-lg-4 col-md-6">
-              <div class="feature-card h-100 from-right">
-                <i class="icon fa-solid fa-display mb-3"></i>
-                <h5 class="card-text">Responsive Design</h5>
-                <p>Websites that work on all screen sizes.</p>
+
+          <div class="row justify-content-center gy-5">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="skill-card text-center html-card">
+                <i class="icon fa-brands fa-html5 mb-3"></i>
+                <h5>HTML</h5>
+                <span class="count" id="html-count"></span>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-              <div class="feature-card h-100 from-top">
-                <i class="icon fa-solid fa-code mb-3"></i>
-                <h5 class="card-text">Clean Code</h5>
-                <p>Organized and readable code structure.</p>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="skill-card text-center css-card">
+                <i class="icon fa-brands fa-css3-alt mb-3"></i>
+                <h5>CSS</h5>
+                <span class="count" id="css-count"></span>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-              <div class="feature-card h-100 from-left">
-                <i class="icon fa-solid fa-bolt-lightning mb-3"></i>
-                <h5 class="card-text">Fast Performance</h5>
-                <p>Optimized for speed and performance.</p>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="skill-card text-center js-card">
+                <i class="icon fa-brands fa-square-js mb-3"></i>
+                <h5>JavaScript</h5>
+                <span class="count" id="js-count"></span>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 offset-lg-4">
-              <div class="feature-card h-100 from-bottom">
-                <i class="icon fa-regular fa-face-grin-beam mb-3"></i>
-                <h5 class="card-text">User Friendly</h5>
-                <p>Easy and intuitive user experience.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--* About Section -->
-
-      <section class="about py-4" id="about">
-        <div class="container">
-          <div class="section-text text-center mb-5">
-            <h2 class="section-title fw-bold">about me</h2>
-            <p class="text">A brief introduction to who I am and what I do</p>
-          </div>
-          <div class="about-content row align-items-center">
-            <div class="about-image col-md-3 mx-auto col-lg-4 col-sm-12 mb-4">
-              <img
-                src="./images/profile.jpg"
-                alt="Profile Picture"
-                class="img-fluid rounded"
-              />
-            </div>
-            <div
-              class="about-text col-lg-6 col-md-6 col-sm-12 offset-md-2 text-center text-md-start"
-            >
-              <h3 class="title mb-3">Hi, I'm Mohamed!</h3>
-              <p>
-                I'm a passionate junior front-end developer with a knack for
-                creating clean, responsive websites. With a strong foundation in
-                HTML, CSS, and JavaScript, I specialize in crafting visually
-                appealing and user-friendly web experiences. I pay close
-                attention to performance and design details, ensuring that every
-                project I work on is not only functional but also aesthetically
-                pleasing. I'm eager to contribute my skills and creativity to
-                build engaging websites that leave a lasting impression.
-              </p>
-              <a href="" class="about-btn btn mt-3">Download CV</a>
-              <a
-                href="https://www.facebook.com/share/16ztwzktt5/"
-                class="facebook about-btn btn mt-3"
-                ><i class="fa-brands fa-facebook-f"></i
-              ></a>
-              <a
-                href="https://wa.me/qr/WCCUHHK4OT5JA1"
-                class="whatsapp about-btn btn mt-3"
-                ><i class="fa-brands fa-whatsapp"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/mohamed_hassan_.0_0?igsh=MWFiaGpwYWxubTlzbw=="
-                class="instagram about-btn btn mt-3"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-
-              <a
-                href="https://www.linkedin.com/in/mohamed-hassan-412896348?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                class="linkedin about-btn btn mt-3"
-                ><i class="fa-brands fa-linkedin-in"></i
-              ></a>
-              <a
-                href="https://github.com/mando157"
-                class="github about-btn btn mt-3"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--* Skills Section -->
-      <section class="skills p-5" id="skills">
-        <div class="container">
-          <div class="section-content">
-            <div class="section-text text-center mb-5">
-              <h2 class="section-title fw-bold">My Skills</h2>
-              <p class="text">Technologies and tools I'm proficient in</p>
-            </div>
-
-            <div class="row justify-content-center gy-5">
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="skill-card text-center html-card">
-                  <i class="icon fa-brands fa-html5 mb-3"></i>
-                  <h5>HTML</h5>
-                  <span class="count" id="html-count"></span>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="skill-card text-center css-card">
-                  <i class="icon fa-brands fa-css3-alt mb-3"></i>
-                  <h5>CSS</h5>
-                  <span class="count" id="css-count"></span>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="skill-card text-center js-card">
-                  <i class="icon fa-brands fa-square-js mb-3"></i>
-                  <h5>JavaScript</h5>
-                  <span class="count" id="js-count"></span>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="skill-card text-center bootstrap-card">
-                  <i class="icon fa-brands fa-bootstrap mb-3"></i>
-                  <h5>Bootstrap</h5>
-                  <span class="count" id="bootstrap-count"></span>
-                </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="skill-card text-center bootstrap-card">
+                <i class="icon fa-brands fa-bootstrap mb-3"></i>
+                <h5>Bootstrap</h5>
+                <span class="count" id="bootstrap-count"></span>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <!-- JS Files -->
-    <script src="./js/script.js"></script>
-    <script src="./js/all.min.js"></script>
-    <script src="./js/bootstrap.bundle.js.map"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-  </body>
+  <!-- JS Files -->
+  <script src="./js/script.js"></script>
+  <script src="./js/all.min.js"></script>
+  <script src="./js/bootstrap.bundle.js.map"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
