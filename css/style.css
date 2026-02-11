@@ -886,8 +886,10 @@ section.features.py-3 {
     text-align: center;
   }
 
-  .service-card .icon {
-    font-size: 30px;
+  .service-card:hover::after {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
