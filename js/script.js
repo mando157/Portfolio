@@ -30,7 +30,7 @@ typeing();
 
 //* Features Card Animation
 
-const cards = document.querySelectorAll(".feature-card , .about-content");
+const cards = document.querySelectorAll(".feature-card ");
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -74,3 +74,49 @@ function move() {
   requestAnimationFrame(move);
 }
 move();
+
+//* Skills Counter
+const htmlcount = document.getElementById("html-count");
+const jscount = document.getElementById("js-count");
+const csscount = document.getElementById("css-count");
+const bootstrapcount = document.getElementById("bootstrap-count");
+const skillsSection = document.getElementById("skills");
+
+let isAnimating = false;
+
+function animateCount(element, target) {
+  if (!element) return;
+
+  let count = 0;
+  const increment = target / 100;
+  const interval = setInterval(() => {
+    count += increment;
+    if (count >= target) {
+      count = target;
+      clearInterval(interval);
+      isAnimating = false;
+    }
+    element.innerText = Math.floor(count) + "%";
+  }, 30);
+}
+
+const skillObserver = new IntersectionObserver(
+  (enters) => {
+    enters.forEach((entry) => {
+      if (entry.isIntersecting && !isAnimating) {
+        isAnimating = true;
+        animateCount(htmlcount, 95);
+        animateCount(jscount, 65);
+        animateCount(csscount, 85);
+        animateCount(bootstrapcount, 75);
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  },
+);
+
+if (skillsSection) {
+  skillObserver.observe(skillsSection);
+}
