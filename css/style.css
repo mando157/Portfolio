@@ -835,8 +835,21 @@ section.features.py-3 {
 
   /** navbar */
   .navbar-nav {
+    padding-top: 5px;
     gap: 20px;
     flex-direction: row;
+  }
+
+  .navbar .link {
+    font-size: 16px !important;
+  }
+
+  .navbar-toggler {
+    border: 2px solid var(--accent-dark-primary) !important;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none !important;
   }
 }
 
