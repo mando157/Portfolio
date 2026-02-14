@@ -903,8 +903,8 @@ section.features.py-3 {
 
 
 lord-icon.image {
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
 }
 
 .contact-form form {
@@ -1150,6 +1150,12 @@ form {
     box-shadow: none !important;
   }
 
+  /*& Background Effects */
+  .fa-phone {
+    top: 40%;
+    left: 90%;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -1235,11 +1241,6 @@ form {
   .i4 {
     top: 12%;
     right: 20%;
-  }
-
-  .fa-phone {
-    top: 40%;
-    left: 85%;
   }
 
   .i8 {
