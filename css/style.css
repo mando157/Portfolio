@@ -133,7 +133,7 @@ li {
 /** HERO */
 .hero {
   position: relative;
-  max-height: 100dvh;
+  max-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,7 +175,7 @@ li {
 .hero-content {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
+  height: 100svh;
   justify-content: space-around;
   position: relative;
   z-index: 3;
@@ -194,7 +194,7 @@ li {
 }
 
 .hero .fa-html5,
-.hero.fa-square-js,
+.hero .fa-square-js,
 .hero .fa-css3 {
   animation: float 6s ease-in-out infinite;
 }
@@ -605,88 +605,26 @@ section.features.py-3 {
   font-weight: bold;
 }
 
-.about .about-btn {
-  padding: 10px 20px;
-  margin-right: 15px;
+
+.about .cv-button,
+.contact-form .contact-btn {
+  padding: 10px 10px;
   background: var(--accent-primary);
   color: var(--black);
   font-weight: bold;
   border-radius: 10px;
 }
 
-.about .about-btn:hover {
+.about .cv-button {
+  width: max-content;
+}
+
+.about .about-btn:hover,
+.contact-form .contact-btn:hover {
   color: var(--white);
   box-shadow: 0px 0px 20px var(--accent-primary);
 }
 
-/** Social icon buttons: make circular and centered */
-
-.about .about-btn.facebook,
-.about .about-btn.whatsapp,
-.about .about-btn.instagram,
-.about .about-btn.linkedin,
-.about .about-btn.github {
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  margin-right: 10px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-primary);
-  color: var(--black);
-}
-
-.about .about-btn.facebook i,
-.about .about-btn.instagram i,
-.about .about-btn.linkedin i,
-.about .about-btn.github i {
-  font-size: 16px;
-}
-
-.about .about-btn.whatsapp i {
-  font-size: 16px;
-}
-
-.about .facebook:hover {
-  background: #1877f2 !important;
-  color: var(--white) !important;
-}
-
-.about .linkedin:hover {
-  background: #0a66c2 !important;
-  color: var(--white) !important;
-}
-
-.about .github:hover {
-  background: #333 !important;
-  color: var(--white) !important;
-}
-
-.about .instagram:hover {
-  background: linear-gradient(45deg,
-      #f58529 0%,
-      #dd2a7b 30%,
-      #8134af 60%,
-      #515bd4 100%) !important;
-  color: var(--white) !important;
-}
-
-.about .whatsapp:hover {
-  background: #25d366 !important;
-  color: var(--color) !important;
-}
-
-@keyframes rotation-icon {
-  from {
-    transform: rotateY(0deg);
-  }
-
-  to {
-    transform: rotateY(360deg);
-  }
-}
 
 /** Skills Section */
 .skills {
@@ -876,6 +814,101 @@ section.features.py-3 {
   font-family: var(--primary-font-family);
 }
 
+/** Cuntact Me Section */
+lord-icon.image {
+  width: 500px;
+  height: 500px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 20px;
+  background: var(--bg-card);
+  box-shadow: inset 0 -10px 30px var(--accent-dark-primary);
+  border-radius: 10px;
+}
+
+.contact-form form textarea {
+  height: 130px;
+}
+
+
+
+/** Social icon buttons: make circular and centered */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-primary);
+  color: var(--black);
+}
+
+.contact-btn:hover {
+  color: var(--white);
+  box-shadow: 0px 0px 20px var(--accent-primary);
+}
+
+.facebook i,
+.instagram i,
+.linkedin i,
+.github i {
+  font-size: 16px;
+}
+
+.whatsapp i {
+  font-size: 16px;
+}
+
+.facebook:hover {
+  background: #1877f2 !important;
+  color: var(--white) !important;
+}
+
+.linkedin:hover {
+  background: #0a66c2 !important;
+  color: var(--white) !important;
+}
+
+.github:hover {
+  background: #333 !important;
+  color: var(--white) !important;
+}
+
+.instagram:hover {
+  background: linear-gradient(45deg,
+      #f58529 0%,
+      #dd2a7b 30%,
+      #8134af 60%,
+      #515bd4 100%) !important;
+  color: var(--white) !important;
+}
+
+.whatsapp:hover {
+  background: #25d366 !important;
+  color: var(--white) !important;
+}
+
+@keyframes rotation-icon {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
 /** >>>>>>>>>>>>>>>>>>>>>>>>>> [ Responsive ] <<<<<<<<<<<<<<<<<<<<<<<<<*/
 @media (max-width : 1024px) {
 
@@ -1005,6 +1038,12 @@ section.features.py-3 {
   /** About Me Section */
   .about-content {
     padding: 0 10px;
+  }
+
+  /** Contact Me Section */
+  lord-icon.image {
+    width: 250px;
+    height: 250px;
   }
 
 }
