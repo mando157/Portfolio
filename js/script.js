@@ -120,3 +120,22 @@ const skillObserver = new IntersectionObserver(
 if (skillsSection) {
   skillObserver.observe(skillsSection);
 }
+
+//* Close navbar when clicking on overlay or nav links
+const overlay = document.querySelector('.overlay');
+const checkbox = document.getElementById('checkbox');
+const navLinks = document.querySelectorAll('.navlink a');
+
+//* Close menu when clicking on overlay
+if (overlay) {
+  overlay.addEventListener('click', () => {
+    checkbox.checked = false;
+  });
+}
+
+//* Close menu when clicking on a nav link
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    checkbox.checked = false;
+  });
+});

@@ -33,38 +33,32 @@
       </svg>
     </a>
 
+
     <!--* Hero Section -->
-
+    <div class="overlay" onclick></div>
     <section id="home" class="hero">
-      <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation ">
-            <i class="fa-solid fa-bars-staggered"></i>
-          </button>
+      <div class="bars" onclick>
+        <input type="checkbox" id="checkbox" name="navbar" class="checkbox" hidden />
+        <label for="checkbox" class="icon-menu">
+          <div class="bar bar-1"></div>
+          <div class="bar bar-2"></div>
+          <div class="bar bar-3"></div>
+        </label>
+      </div>
 
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
+      <nav class="navbar">
+        <div class=" nav-container">
+          <ul class="nav-list" id="navList">
+            <li class="navlink"><a href="#services" class="link">Services</a></li>
+            <li class="navlink"><a href="#portfolio" class="link">Portfolio</a></li>
+            <li class="navlink"><a href="#contact" class="link">Contact Us</a></li>
+            <li class="navlink"><a href="#awards" class="link">Awards</a></li>
+          </ul>
 
-              <li class="navlink"><a href="#services" class="link">Services</a></li>
-              <li class="navlink"><a href="#portfolio" class="link">Portfolio</a></li>
-              <li class="navlink"><a href="#contact" class="link">Contact Us</a></li>
-              <li class="navlink"><a href="#awards" class="link">Awards</a></li>
-            </ul>
-          </div>
         </div>
+
       </nav>
-      <!-- <nav class="navbar">
-          <ul class="nav-list first-list">
-            <li class="navlink"><a href="" class="link">Services</a></li>
-            <li class="navlink"><a href="" class="link">Portfolio</a></li>
-          </ul>
-          <ul class="nav-list second-list">
-            <li class="navlink"><a href="" class="link">Contact Us</a></li>
-            <li class="navlink"><a href="" class="link">Awards</a></li>
-          </ul>
-        </nav> -->
       <div class="hero-content">
         <i class="fa-brands fa-html5"></i>
         <i class="fa-brands fa-react"></i>
