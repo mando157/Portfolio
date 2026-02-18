@@ -931,7 +931,7 @@ section.features.py-3 {
 .feature-use {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 5px;
 }
@@ -1331,10 +1331,10 @@ form {
   }
 
   /** Portfolio Section */
-  .project-details {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
+
+
+  .project-details .project-name {
+    margin-top: 30px;
   }
 
   .project-details .project-name,
@@ -1344,18 +1344,17 @@ form {
 
   .project-details h4,
   .project-details p {
-    font-size: 10px;
-    margin: 0;
+    font-size: 16px;
   }
 
   .see-project-btn {
-    width: 90px;
-    height: 36px;
+    width: 100px;
+    height: 46px;
   }
 
   .see-project-btn .clone>*,
   .see-project-btn .text>* {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .see-project-btn svg {
@@ -1588,6 +1587,39 @@ form {
   .i7 {
     top: 20%;
     right: 77%;
+  }
+
+
+  /** Portfolio Section */
+
+  .project-details {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .project-details .project-name {
+    margin-top: 30px;
+  }
+
+  .project-details .project-name,
+  .project-details h5 {
+    font-size: 16px;
+  }
+
+  .project-details h4,
+  .project-details p {
+    font-size: 10px;
+  }
+
+  .see-project-btn .clone>*,
+  .see-project-btn .text>* {
+    font-size: 0.8rem;
+  }
+
+  .see-project-btn {
+    width: 90px;
+    height: 36px;
   }
 
   /** Footer Section */
