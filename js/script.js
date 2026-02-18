@@ -139,3 +139,53 @@ navLinks.forEach(link => {
     checkbox.checked = false;
   });
 });
+
+//* Cursor
+
+const cursor = document.querySelector(".cursor");
+let isHoveringLink = false;
+
+// Hide cursor on touch devices (mobile/tablet)
+if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+  if (cursor) {
+    cursor.style.display = "none";
+  }
+} else {
+  // Only run cursor code on non-touch devices
+  document.addEventListener("mousemove", (e) => {
+    if (cursor) {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+      if (!isHoveringLink) {
+        cursor.style.opacity = "1";
+      }
+    }
+  });
+  document.addEventListener("mouseleave", () => {
+    if (cursor) {
+      cursor.style.opacity = "0";
+    }
+  });
+
+  document.addEventListener("mouseenter", () => {
+    if (cursor && !isHoveringLink) {
+      cursor.style.opacity = "1";
+    }
+  });
+  document.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("mouseenter", () => {
+      isHoveringLink = true;
+      if (cursor) {
+        cursor.style.transform = "scale(2.5)";
+        cursor.style.opacity = "0.2";
+      }
+    });
+    link.addEventListener("mouseleave", () => {
+      isHoveringLink = false;
+      if (cursor) {
+        cursor.style.transform = "scale(1)";
+        cursor.style.opacity = "1";
+      }
+    });
+  });
+}
