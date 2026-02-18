@@ -82,7 +82,6 @@ nav.navbar {
   display: flex;
   gap: 50px;
   padding: 15px 30px;
-  width: max-content;
   height: max-content;
   background: var(--bg-card);
   box-shadow: inset 0 -10px 30px var(--accent-dark-primary);
@@ -1136,13 +1135,14 @@ form {
     position: fixed;
     top: -600px;
     left: 50%;
+    width: 200px;
+    flex-direction: column;
     transform: translateX(-50%);
     align-items: center;
     gap: 20px;
     padding: 20px 0;
     display: none;
     z-index: 1500;
-
   }
 
   .nav-list.active {
@@ -1244,7 +1244,7 @@ form {
   .navbar .nav-list {
     gap: 20px;
     padding: 15px 10px;
-    width: 200px;
+
     flex-direction: column;
   }
 
